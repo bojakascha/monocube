@@ -1,2 +1,0 @@
-# monocube
-monocube homepage

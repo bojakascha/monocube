@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>monocube — info</title>
+<meta name="color-scheme" content="dark">
+<style>
+  :root{
+    --bg:#080a10; --bg2:#0f1320;
+    --gold:#ffb52e; --gold-strong:#ff9900;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif; color:#eaeaea;
+    background: radial-gradient(1200px 800px at 65% -10%, #1a1f33 0%, transparent 60%),
+               radial-gradient(900px 600px at 10% 110%, #151a2a 0%, transparent 55%),
+               linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+    display:flex; align-items:center; justify-content:center; padding:48px 18px;
+  }
+  .shell{width:min(720px,100%); text-align:center}
+  .card{
+    padding:28px 22px 32px; border-radius:18px; background:rgba(8,10,16,.55);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 40px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.04) inset;
+  }
+  .hero{
+    display:block; margin:0 auto 0px; width:min(260px,45vw); height:auto;
+    filter: drop-shadow(0 0 22px rgba(255,153,0,.55)) drop-shadow(0 0 44px rgba(255,47,178,.25));
+  }
+  h1{
+    margin:.15rem 0 .35rem; font-size:clamp(40px, 9vw, 86px); font-weight:800; letter-spacing:.2px;
+    color:var(--gold);
+    text-shadow:
+      0 0 1px #000,
+      0 0 6px rgba(255,181,46,.85),
+      0 0 18px rgba(255,153,0,.65),
+      0 0 42px rgba(255,47,178,.35);
+  }
+  .narrow{max-width:42rem; margin:0 auto}
+  .info {
+    margin: 20px auto; /* Centers the info div */
+    padding: 18px 20px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .02);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .05);
+    text-align: left; /* Left align paragraphs */
+  }
+  .info p{margin:.25rem 0}
+  .muted{opacity:.75}
+  .btn{
+    display:inline-block; text-decoration:none; font-weight:700; letter-spacing:.4px;
+    padding:14px 28px; border-radius:14px; border:2px solid var(--gold); color:var(--gold);
+    background:rgba(255,153,0,.05);
+    box-shadow:0 0 8px rgba(255,181,46,.55), inset 0 0 16px rgba(255,153,0,.12);
+    transition: transform .08s ease, box-shadow .2s ease;
+  }
+  .btn:hover{ transform: translateY(-1px); box-shadow:0 0 14px rgba(255,181,46,.85) }
+  footer{margin-top:22px; font-size:.9rem; opacity:.65; text-align:center}
+  a.email{color:#eaeaea}
+  .highlight {
+    color: var(--gold);
+    text-shadow: 
+      0 0 1px #000,
+      0 0 6px rgba(255,181,46,.85),
+      0 0 18px rgba(255,153,0,.65),
+      0 0 42px rgba(255,47,178,.35);
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+</style>
+</head>
+<body>
+  <main class="shell">
+    <section class="card narrow">
+      <img class="hero" src="hero1.png" alt="monocube neon cube logo" />
+      <!-- <h1>monocube</h1> -->
+
+      <div class="container">
+        <div class="spacer"></div>
+        <div class="info">
+          <p><strong class="highlight">monocube AB</strong></p>
+          <p><a class="email" href="mailto:contact@monocube.se">contact@monocube.se</a></p>
+          <p>SE556924866801</p>
+        </div>
+        <div class="spacer"></div>
+      </div>
+
+      <p><a class="btn" href="index.html">BACK</a></p>
+      <footer>© <span id="y"></span> monocube</footer>
+    </section>
+  </main>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>

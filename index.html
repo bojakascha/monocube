@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#000000">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>monocube</title>
+<meta name="color-scheme" content="dark">
+<style>
+  :root{
+    --bg:#080a10;
+    --bg2:#0f1320;
+    --gold:#ffb52e;
+    --gold-strong:#ff9900;
+    --pink:#ff2fb2;
+    --cyan:#2de5ff;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;
+    color:#eaeaea; background: radial-gradient(1200px 800px at 65% -10%, #1a1f33 0%, transparent 60%),
+                       radial-gradient(900px 600px at 10% 110%, #151a2a 0%, transparent 55%),
+                       linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+    display:flex; align-items:center; justify-content:center; padding:48px 18px;
+  }
+  .shell{width:min(720px,100%); text-align:center}
+  .card{
+    padding:28px 22px 32px; border-radius:18px; background:rgba(8,10,16,.55);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 40px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.04) inset;
+  }
+  .hero{
+    display:block; margin:0 auto 0px; width:min(260px,45vw); height:auto;
+    filter: drop-shadow(0 0 22px rgba(255,153,0,.55)) drop-shadow(0 0 44px rgba(255,47,178,.25));
+  }
+  h1{
+    margin:.15rem 0 .35rem; font-size:clamp(40px, 9vw, 86px); font-weight:800; letter-spacing:.2px;
+    color:var(--gold);
+    text-shadow:
+      0 0 1px #000,
+      0 0 6px rgba(255,181,46,.85),
+      0 0 18px rgba(255,153,0,.65),
+      0 0 42px rgba(255,47,178,.35);
+  }
+  .sub{margin:0 0 28px; color:#9fb3c8}
+  .btn{
+    display:inline-block; text-decoration:none; font-weight:700; letter-spacing:.4px;
+    padding:14px 28px; border-radius:14px;
+    border:2px solid var(--gold); color:var(--gold); background:rgba(255,153,0,.05);
+    box-shadow:
+      0 0 8px rgba(255,181,46,.55),
+      inset 0 0 16px rgba(255,153,0,.12);
+    transition: transform .08s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+  }
+  .btn:hover{ transform: translateY(-1px); box-shadow:0 0 14px rgba(255,181,46,.85), 0 0 40px rgba(45,229,255,.15) }
+  .btn:active{ transform: translateY(0) scale(.99) }
+  /* keep content pleasantly narrow on all screens */
+  .narrow{max-width:42rem; margin:0 auto}
+  footer{margin-top:22px; font-size:.9rem; opacity:.65}
+</style>
+</head>
+<body>
+  <main class="shell">
+    <section class="card narrow">
+      <img class="hero" src="hero1.png" alt="monocube neon cube logo" />
+      <h1>monocube</h1>
+      <p class="sub"> </p>
+      <p><a class="btn" href="info.html">MORE INFO</a></p>
+      <footer>© <span id="y"></span> monocube</footer>
+    </section>
+  </main>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
